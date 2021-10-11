@@ -1,7 +1,3 @@
-variable "organization" {
-  description = "(Required)This is the target GitHub organization"
-  type        = string
-}
 
 variable "team_members" {
   description = "List of team members"
@@ -10,5 +6,15 @@ variable "team_members" {
 
 variable "team_name" {
   description = "the team's full name"
+  type        = string
+}
+
+variable "repos" {
+  description = "List of repos"
+  type        = list(string)
+}
+
+variable "role" {
+  description = "List of repos"
   type        = string
 }
