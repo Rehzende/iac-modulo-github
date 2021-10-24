@@ -39,7 +39,7 @@ jobs:
   terraform_how_to_use:
     name: "Applying in Test"
     runs-on: ubuntu-18.04
-    if: github.event.pull_request.merged
+    if: github.event.pull_request.merged && github.event.pull_request.base == "main" 
     env:
       GITHUB_TOKEN:  ${{ secrets.TF_GITHUB_TOKEN }}
 
